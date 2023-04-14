@@ -11,6 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import {MessagesService} from './services/messages.service';
+import { AvatarComponent } from './components/avatar/avatar.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +21,15 @@ import { FooterComponent } from './components/footer/footer.component';
     TweetComponent,
     HomeComponent,
     NewPostComponent,
-    FooterComponent
+    FooterComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

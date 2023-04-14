@@ -3,17 +3,13 @@
         <div class="flex justify-center w-full">
 
             <!-- avatar circle -->
-            <div class="flex-shrink-0 mr-5">
-                <div class="cursor-pointer font-bold w-12 h-12 bg-gray-300 flex items-center justify-center rounded-full">
-                    F
-                </div>
-            </div>
+            <app-avatar></app-avatar>
 
             <!-- form -->
             <div class="flex-1">
 
                 <!-- text area -->
-                <textarea [(ngModel)]="tweetMessage" (input)="changeTweet()" [maxlength]="tweetMaxLength" class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 border border-transparent rounded-lg py-2 px-4 block w-full appearance-none resize-none leading-normal font-light placeholder-gray-600" placeholder="What's happening..." rows="3"></textarea>
+                <textarea (keyup.enter)="sendTweet()" [(ngModel)]="tweetMessage" (input)="changeTweet()" [maxlength]="tweetMaxLength" class="mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 border border-transparent rounded-lg py-2 px-4 block w-full appearance-none resize-none leading-normal font-light placeholder-gray-600" placeholder="What's happening..." rows="3"></textarea>
 
                 <!-- divider line -->
                 <div class="w-auto border rounded-lg">
